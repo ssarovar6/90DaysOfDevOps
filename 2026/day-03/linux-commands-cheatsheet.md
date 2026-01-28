@@ -20,6 +20,7 @@ accton <file_name> - this is used for autditing, process accounting , it records
 bg job_id - this command resumes stopped job in background
 fg job_id- moves job to foreground and allow interaction with the running process.
 kill pid - this is used for terminating processes.
+pkill - terminate with process name pattern or  
 mpstat - displays CPU Usage statistics, part od sysstat package
 pidof processname - displays process id of a running program
 pmap pid- displays memory usage and analyze meomy consumption
