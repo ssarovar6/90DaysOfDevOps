@@ -9,7 +9,7 @@
 <h3></h3>Step 1: Installed Nginx</h3>
 Verify Nginx is running:<br> <img width="962" height="515" alt="image" src="https://github.com/user-attachments/assets/bb36f603-bc49-4b40-adf7-57e6f5da6403" />
 <br>
-<h2>Part 2: Security Group Configuration </h2>
+<h2>Part 3: Security Group Configuration </h2>
 Test Web Access: http://3.250.69.231:80
 
 <br>Below is Nginx welcome page!
@@ -29,8 +29,9 @@ scp -i /root/practice-key.pem ubuntu@3.250.69.231:/home/ubuntu/nginx-log.txt /ro
 <img width="743" height="105" alt="image" src="https://github.com/user-attachments/assets/0905e200-1b0e-436b-9a85-ff20ca7a0d14" />
 
 
+<br>
 challenge i faced :
-while saving log to a file i am getting permission denied error. I did used Sudo still error. so had to use another path
+while saving log to a file i am getting permission denied error. I did used Sudo still error. so had to use another path<br>
 command - sudo cat access.log>/var/log/nginx/nginx-log.txt
 reolution: sudo cat access.log>/home/ubuntu/nginx-log2.txt
 
