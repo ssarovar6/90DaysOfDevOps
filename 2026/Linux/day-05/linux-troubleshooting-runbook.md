@@ -30,17 +30,43 @@ UBUNTU_CODENAME=jammy
 
 - top : real time monitoring, shows live process activity and shows CPU and memory usage.
 
-- ps -o pid : displays proces PID value
-- pcpu :
-- pmem : 
-- free -h : display amount of free and used memory in system.
+- ps -o pid : displays proces PID value 
 
-- df -h :
-- du -sh /var/log :
-- iostat :
-- ss -tulpn :
-- netstat -tulpn: 
-- curl -I <service-endpoint> :
-- ping: 
-- journalctl -u <service> -n 50
-- tail -n 50 /var/log/<file>.log
+- pcpu : displays active process cpu%
+
+- pmem : displays active process memory%
+
+- free -h : display amount of free and used physical and swap memory in system.
+
+- df -h : display the space available on all currently mounted file systems in human readable form.
+
+- du : estimate file space usage  e.g. du -sh /var/log
+
+- iostat : used for monitoring system input/output device.
+
+- ss -tulpn : utility to investigate sockets
+
+- netstat -tulpn: print network connections, routing tables.
+
+- curl -I <service-endpoint> : tool  for  transferring  data from or to a server using URLs
+
+- ping: used for checking if a server is available and reachable or not
+
+- journalctl : Print log entries from the systemd journal e.g journalctl -u <service> -n 50
+output =
+ 
+Feb 08 04:00:11 ip-172-31-16-217 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Feb 08 04:00:11 ip-172-31-16-217 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Feb 08 06:47:31 ip-172-31-16-217 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Feb 08 06:47:32 ip-172-31-16-217 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Feb 08 06:47:54 ip-172-31-16-217 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Feb 08 06:47:54 ip-172-31-16-217 systemd[1]: nginx.service: Deactivated successfully.
+Feb 08 06:47:54 ip-172-31-16-217 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Feb 08 07:02:25 ip-172-31-16-217 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+
+
+
+- tail : 
+e.g. tail -n 10 /var/log/nginx/access.log
+output = 
+20.64.105.245 - - [09/Feb/2026:14:03:37 +0000] "GET / HTTP/1.1" 200 409 "-" "Mozilla/5.0 zgrab/0.x"
