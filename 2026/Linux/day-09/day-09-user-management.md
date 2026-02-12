@@ -5,10 +5,12 @@
 - Groups: developers, admins, project-team
 
 ## Group Assignments
-[List who is in which groups]
+![alt text](image.png)
 
 ## Directories Created
-[List directories with permissions]
+![alt text](image-1.png)
+
+![alt text](image-2.png)
 
 ## Commands Used
 - users with home directories and passwords:
