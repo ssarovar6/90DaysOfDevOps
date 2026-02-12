@@ -1,0 +1,5 @@
+20.64.105.245 - - [09/Feb/2026:14:03:37 +0000] "GET / HTTP/1.1" 200 409 "-" "Mozilla/5.0 zgrab/0.x"
+91.215.85.12 - - [09/Feb/2026:14:15:36 +0000] "GET /.env HTTP/1.1" 404 134 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+34.76.139.101 - - [09/Feb/2026:14:42:35 +0000] "GET / HTTP/1.1" 200 409 "-" "python-requests/2.32.5"
+84.239.47.11 - - [09/Feb/2026:14:46:48 +0000] "GET /.env HTTP/1.1" 404 196 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
+84.239.47.11 - - [09/Feb/2026:14:46:48 +0000] "POST / HTTP/1.1" 405 568 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
