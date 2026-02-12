@@ -20,7 +20,7 @@
 
 
 ## File system
-- wget - use for dowloading files, it is non-interactive meaning it can work in background, even if user is not logged on.
+- wget - use for dowloading files though URLs, it is non-interactive meaning it can work in background, even if user is not logged on.
 - w - this displays information about logged-in users and their running processes.
 - chmod - changes file mode or permission
 - chown - cha nges owner and group of user
