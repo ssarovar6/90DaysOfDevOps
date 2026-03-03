@@ -1,0 +1,14 @@
+name: Sudha
+location: Jharkhand
+experience_years: 4
+learning: devops
+
+tools:
+  - Git
+  - Docker
+  - kubernetes
+  - Jenkins
+  - GitHub Actions
+hobbies: [learning, reading, playing]
+
+

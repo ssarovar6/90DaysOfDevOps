@@ -45,6 +45,8 @@ Create `server.yaml` that describes a server:
 
 **Verify:** Try adding a tab instead of spaces — what happens when you validate it?
 
+![alt text](image-3.png)
+
 ---
 
 ### Task 4: Multi-line Strings
@@ -54,13 +56,7 @@ In `server.yaml`, add a `startup_script` field using:
 
 Write in your notes: When would you use `|` vs `>`?
 
----
 
-### Task 5: Validate Your YAML
-1. Install `yamllint` or use an online validator
-2. Validate both your YAML files
-3. Intentionally break the indentation — what error do you get?
-4. Fix it and validate again
 
 ---
 

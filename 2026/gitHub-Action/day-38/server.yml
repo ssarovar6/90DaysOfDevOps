@@ -1,0 +1,11 @@
+name: server
+server:
+  - name: Nginx 
+  - ip: 192.136.10.0
+  - port: 80
+database:
+  - host: MYSQL
+  - name: my_db
+  - credentials:
+      user: user
+      password: pass
