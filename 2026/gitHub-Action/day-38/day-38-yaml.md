@@ -31,7 +31,7 @@ Create `server.yaml` that describes a server:
 
 **Verify:** Try adding a tab instead of spaces — what happens when you validate it?
 
-
+![alt text](image-2.png)
 
 ---
 
