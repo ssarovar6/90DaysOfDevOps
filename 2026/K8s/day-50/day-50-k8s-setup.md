@@ -65,6 +65,9 @@ choco install kubernetes-cli
 Verify:
 ```bash
 kubectl version --client
+
+![alt text](image-1.png)
+
 ```
 
 ---
