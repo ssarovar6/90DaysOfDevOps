@@ -89,9 +89,14 @@ sudo mv ./kind /usr/local/bin/kind
 # Create a cluster
 kind create cluster --name devops-cluster
 
+![alt text](image-2.png)
+
 # Verify
 kubectl cluster-info
 kubectl get nodes
+
+![alt text](image-3.png)
+
 ```
 
 **Option B: minikube**

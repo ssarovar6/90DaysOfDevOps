@@ -23,12 +23,16 @@ spec:
 Apply it:
 ```bash
 kubectl apply -f nginx-pod.yaml
+
 ```
 
 Verify:
 ```bash
 kubectl get pods
 kubectl get pods -o wide
+
+![alt text](image-1.png)
+
 ```
 
 Wait until the STATUS shows `Running`. Then explore:
@@ -38,6 +42,8 @@ kubectl describe pod nginx-pod
 
 # Read the logs
 kubectl logs nginx-pod
+
+![alt text](image-2.png)
 
 # Get a shell inside the container
 kubectl exec -it nginx-pod -- /bin/bash
