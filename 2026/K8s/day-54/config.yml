@@ -1,0 +1,21 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: app-config
+data:
+  default.conf: |
+    server {
+      listen 80;
+      server_name _;
+      # Health endpoint
+      location /health {
+          default_type text/plain;
+          return 200 'healthy';
+      }
+
+        # Default location
+      location / {
+          root /usr/share/nginx/html;
+          index index.html;
+      }
+    }
