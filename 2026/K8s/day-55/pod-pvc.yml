@@ -1,0 +1,24 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod-pvc
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+      command: ["sh","-c"]
+      args:
+        - |
+          while true; do
+            echo "Hello dost" >> /data/message.txt;
+            sleep 5;
+          done
+      volumeMounts:
+        - name: nginx-vol
+          mountPath: /data
+  volumes:
+    - name: nginx-vol
+      persistentVolumeClaim:
+        claimName: nginx-pvc

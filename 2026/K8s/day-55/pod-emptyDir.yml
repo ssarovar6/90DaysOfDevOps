@@ -1,0 +1,23 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+    - name: nginx-cont
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+      command: ["sh","-c"]
+      args: 
+        - |
+          while true; do
+            date '+%d-%m-%Y %H:%M:%S' >> /data/message.txt;
+            sleep 5;
+          done
+      volumeMounts:
+        - name: nginx-vol
+          mountPath: /data
+  volumes:
+    - name: nginx-vol
+      emptyDir: {}
