@@ -1,0 +1,31 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: example-hpa
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    apiVersion: apps/v1
+    name: hpa-deploy
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 0 # No delay
+      policies:
+      - type: Percent
+        value: 100 # Allow rapid upscaling
+        periodSeconds: 15
+    scaleDown:
+      stabilizationWindowSeconds: 300 # 5-minute cooldown
+      policies:
+      - type: Percent
+        value: 50 # Example: Scale down max 50% of pods
+        periodSeconds: 60

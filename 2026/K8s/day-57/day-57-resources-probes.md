@@ -69,7 +69,11 @@ A readiness probe controls traffic. Failure removes the Pod from Service endpoin
 4. Break the probe: `kubectl exec <pod> -- rm /usr/share/nginx/html/index.html`
 5. Wait 15 seconds — Pod shows `0/1` READY, endpoints are empty, but the container is NOT restarted
 
-**Verify:** When readiness failed, was the container restarted?
+**Verify:** When readiness failed, was the container restarted? = No
+
+![alt text](image-10.png)
+![alt text](image-9.png)
+![alt text](image-8.png)
 
 ---
 
@@ -81,6 +85,8 @@ A startup probe gives slow-starting containers extra time. While it runs, livene
 3. Add a `livenessProbe` that checks the same file — it only kicks in after startup succeeds
 
 **Verify:** What would happen if `failureThreshold` were 2 instead of 12?
+
+
 
 ---
 

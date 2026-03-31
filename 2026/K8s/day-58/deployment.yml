@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: hpa-deploy
+  labels:
+    app: hpa
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hpa
+  template:
+    metadata:
+      labels:
+        app: hpa
+    spec:
+      containers:
+        - name: hpa-container
+          image: registry.k8s.io/hpa-example
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 200m
+
+
+
