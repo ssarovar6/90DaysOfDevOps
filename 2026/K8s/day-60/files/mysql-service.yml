@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql
+  namespace: capstone
+spec:
+  clusterIP: None  # this line makes it headless
+  selector:
+    app: mysql
+  ports:
+    - port: 3306
+      targetPort: 3306
