@@ -20,7 +20,9 @@ ans: as compared to manually creating resources in the AWS Console, IAC solves f
   * consistency - IaC maintains environment alignment and reduces descrepencies between development and production setup.
 
 3. How is Terraform different from AWS CloudFormation, Ansible, and Pulumi?
+ answer In copy
 4. What does it mean that Terraform is "declarative" and "cloud-agnostic"?
+ answer In copy
 
 Write this in your own words -- not copy-pasted definitions.
 
@@ -60,6 +62,8 @@ aws sts get-caller-identity
 
 You should see your AWS account ID and ARN.
 
+![alt text](image.png)
+
 ---
 
 ### Task 3: Your First Terraform Config -- Create an S3 Bucket
@@ -83,7 +87,11 @@ terraform apply     # Create the bucket (type 'yes' to confirm)
 
 Go to the AWS S3 console and verify your bucket exists.
 
-**Document:** What did `terraform init` download? What does the `.terraform/` directory contain?
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+**Document:** What did `terraform init` download? What does the `.terraform/` directory contain? = answer in copy
 
 ---
 
@@ -101,7 +109,9 @@ terraform apply
 
 Go to the AWS EC2 console and verify your instance is running with the correct name tag.
 
-**Document:** How does Terraform know the S3 bucket already exists and only the EC2 instance needs to be created?
+![alt text](image-3.png)
+
+**Document:** How does Terraform know the S3 bucket already exists and only the EC2 instance needs to be created? = ans in copy
 
 ---
 
@@ -115,6 +125,11 @@ terraform show                          # Human-readable view of current state
 terraform state list                    # List all resources Terraform manages
 terraform state show aws_s3_bucket.<name>   # Detailed view of a specific resource
 terraform state show aws_instance.<name>
+
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+
 ```
 
 3. Answer these questions in your notes:
