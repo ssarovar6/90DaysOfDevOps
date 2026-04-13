@@ -51,8 +51,8 @@ Look at your `main.tf` carefully:
 3. The route table association references both the route table and the subnet
 
 Answer these questions:
-- How does Terraform know to create the VPC before the subnet?
-- What would happen if you tried to create the subnet before the VPC existed?
+- How does Terraform know to create the VPC before the subnet? ans = terraform knows to create VPC before subnet because of dependency graph.
+- What would happen if you tried to create the subnet before the VPC existed? ans = operation will fail
 - Find all implicit dependencies in your config and list them
 
 ---
@@ -113,7 +113,7 @@ terraform destroy
 ```
 4. Watch the destroy order -- Terraform destroys in reverse dependency order. Verify in the AWS console that everything is cleaned up.
 
-**Document:** What are the three lifecycle arguments (`create_before_destroy`, `prevent_destroy`, `ignore_changes`) and when would you use each?
+**Document:** 
 
 ---
 
