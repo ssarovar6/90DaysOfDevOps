@@ -146,6 +146,9 @@ terraform apply
 
 **Verify:** Two EC2 instances running, same security group, different names. Check the AWS console.
 
+
+![alt text](image-1.png)
+
 ---
 
 ### Task 5: Use a Public Registry Module

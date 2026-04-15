@@ -120,7 +120,7 @@ Stop hardcoding the AMI ID. Use a data source to fetch it dynamically.
 
 Apply and verify -- your config now works in any region without changing the AMI.
 
-**Document:** What is the difference between a `resource` and a `data` source?
+**Document:** What is the difference between a `resource` and a `data` source? ans = A Data Source allows you to fetch information about resources that already exist, either created manually or by a different Terraform configuration
 
 ---
 
