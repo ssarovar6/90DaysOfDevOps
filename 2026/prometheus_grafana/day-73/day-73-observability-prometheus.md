@@ -215,11 +215,11 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yml'
     restart: unless-stopped
 
-  notes-app:
-    image: trainwithshubham/notes-app:latest
-    container_name: notes-app
+  online-shop-app:
+    image: ssarovar6/online-shop-app:latest
+    container_name: online-shop-app
     ports:
-      - "8000:8000"
+      - "80:80"
     restart: unless-stopped
 
 volumes:
@@ -237,9 +237,9 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
 
-  - job_name: "notes-app"
+  - job_name: "online-shop-app"
     static_configs:
-      - targets: ["notes-app:8000"]
+      - targets: ["online-shop-app:80"]
 ```
 
 Restart the stack:
@@ -251,9 +251,9 @@ docker compose up -d
 
 Go back to Status > Targets. You should now see two targets. Generate some traffic to the app:
 ```bash
-curl http://localhost:8000
-curl http://localhost:8000
-curl http://localhost:8000
+curl http://localhost:80
+curl http://localhost:80
+curl http://localhost:80
 ```
 
 **Note:** Not all applications expose Prometheus metrics natively. In later days you will learn how Node Exporter, cAdvisor, and OTEL Collector act as metric exporters for systems that do not have built-in Prometheus support.
