@@ -256,6 +256,16 @@ command:
 3. Check the TSDB status in the UI: Status > TSDB Status
 
 **Document:** What happens when retention is exceeded? Why is a volume mount important for Prometheus data?
+ans = 
+What Happens When Retention is Exceeded
+Data Purge: Prometheus deletes older "blocks" of data from the local disk.
+Metric Gaps: You can no longer query metrics older than the retention period.
+Fixed Storage: This prevents the disk from filling up and crashing the service.
+Why a Volume Mount is Critical - 
+Episodic Storage: Data lives only inside the container’s volatile memory/writable layer.
+Data Loss on Restart: If the container restarts, crashes, or updates, all your historical metrics are wiped.
+Persistence: A volume mount maps a folder on your physical host (or cloud storage) to the container.
+
 
 ---
 
