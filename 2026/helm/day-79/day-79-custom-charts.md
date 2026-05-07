@@ -67,8 +67,8 @@ type: application
 version: 0.1.0
 appVersion: "1.0.0"
 maintainers:
-  - name: TrainWithShubham
-    url: https://github.com/TrainWithShubham
+  - name: ssarovar6
+    url: https://github.com/ssarovar6
 keywords:
   - bankapp
   - spring-boot
@@ -101,6 +101,10 @@ bankapp:
     minReplicas: 2
     maxReplicas: 4
     targetCPUUtilization: 70
+ingress:
+  enabled: false
+httpRoute:
+enabled: false
 
 # MySQL configuration
 mysql:

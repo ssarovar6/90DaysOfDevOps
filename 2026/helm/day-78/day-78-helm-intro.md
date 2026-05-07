@@ -32,7 +32,7 @@ You need a running Kubernetes cluster. Use any of these:
 
 **Set up a Kind cluster using the AI-BankApp's config:**
 
-Note For Me- install Kind, Docker, docker-compose-v2, kubectl, helm
+Note For Me- install Kind, Docker, docker-compose-v2, kubectl, helm, cretae cluster ,add $USER to docker group, 
 
 ```bash
 git clone -b feat/gitops https://github.com/TrainWithShubham/AI-BankApp-DevOps.git
