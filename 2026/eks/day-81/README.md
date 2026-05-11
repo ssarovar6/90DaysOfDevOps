@@ -104,6 +104,8 @@ node_max_count     = 5
 
 **Document:** Draw the architecture: VPC -> Subnets -> EKS Control Plane -> Node Group -> Pods
 
+![alt text](image.png)
+
 ---
 
 ### Task 3: Provision the EKS Cluster
